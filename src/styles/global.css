@@ -33,7 +33,7 @@ html, body {
 }
 
 body {
-	@apply h-full flex flex-col m-0 p-0 break-words bg-white dark:bg-zinc-900 text-zinc-950 dark:text-white text-base leading-normal
+	@apply h-full flex flex-col m-0 p-0 break-words bg-white dark:bg-zinc-900 text-zinc-950 dark:text-white text-base leading-normal transition-colors  duration-150
 }
 
 code {
@@ -49,11 +49,39 @@ pre > code {
 }
 
 a {
-	@apply transition-colors hover:text-amber-500
+	@apply hover:text-amber-500
 }
 
 main {
 	@apply flex-1
+}
+
+:root {
+	--astro-code-color-text: azure;
+	--astro-code-color-background: black;
+	--astro-code-token-constant: plum;
+	--astro-code-token-string: orchid;
+	--astro-code-token-comment: salmon;
+	--astro-code-token-keyword: powderblue;
+	--astro-code-token-parameter: seashell;
+	--astro-code-token-function: #0d9488;
+	--astro-code-token-string-expression: #fff;
+	--astro-code-token-punctuation: linen;
+	--astro-code-token-link: honeydew;
+}
+
+html.dark {
+	--astro-code-color-text: #c9d1d9;
+	--astro-code-color-background: #0d1117;
+	--astro-code-token-constant: #79c0ff;
+	--astro-code-token-string: #a5d6ff;
+	--astro-code-token-comment: #8b949e;
+	--astro-code-token-keyword: #ff7b72;
+	--astro-code-token-parameter: #c9d1d9;
+	--astro-code-token-function: #0d9488;
+	--astro-code-token-string-expression: #fff;
+	--astro-code-token-punctuation: #c9d1d9;
+	--astro-code-token-link: #000012;
 }
 
 .sr-only {
@@ -77,5 +105,25 @@ main {
 .content {
 	p {
 		@apply mb-4
+	}
+
+	/* h1, h2, h3, h4, h5, h6 {
+		@apply text-amber-500
+	} */
+
+	h1 {
+		@apply text-4xl font-bold
+	}
+
+	h2 {
+		@apply text-3xl font-bold
+	}
+
+	h3 {
+		@apply text-2xl font-bold
+	}
+
+	h4 {
+		@apply text-xl font-bold
 	}
 }

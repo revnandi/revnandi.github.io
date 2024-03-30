@@ -9,8 +9,10 @@ export default defineConfig({
   site: 'https://revnandi.dev',
   integrations: [mdx(), sitemap(), tailwind()],
   markdown: {
-    shikiConfig: {
-      theme: 'min-dark'
-    }
-  }
+    shikiConfig: { theme: "css-variables" },
+  },
+  shikiConfig: {
+    wrap: true,
+    skipInline: false,
+  },
 });

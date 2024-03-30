@@ -7,7 +7,7 @@ import FormattedDate from "../components/FormattedDate.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate } = Astro.props;
+const { title, description, pubDate, updatedDate, tags } = Astro.props;
 ---
 
 <html lang="en">
@@ -17,7 +17,8 @@ const { title, description, pubDate, updatedDate } = Astro.props;
 
   <body>
     <Header />
-    <main class="container mx-auto mt-12 xl:max-w-3xl">
+    <main class="container mx-auto mt-12 xl:max-w-3xl   
+px-4">
       <article>
         <div class="prose">
           <div class="py-6 title">
@@ -33,6 +34,13 @@ const { title, description, pubDate, updatedDate } = Astro.props;
               }
             </div>
           </div>
+					<div>
+						{
+							tags.map((tag) => (
+								<span class="inline-block px-2 py-1 mr-2 text-sm rounded-md bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">{tag}</span>
+							))
+						}
+					</div>
           <div class="mt-12 content">
             <slot />
           </div>
