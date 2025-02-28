@@ -13,9 +13,9 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
-* {
+/* * {
   margin: 0;
-}
+} */
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -40,7 +40,7 @@ html, body {
 }
 
 body {
-	@apply h-full flex flex-col m-0 p-0 break-words bg-white dark:bg-zinc-900 text-zinc-950 dark:text-white text-base leading-normal transition-colors  duration-150
+	@apply h-full flex flex-col items-center m-0 p-0 break-words bg-white dark:bg-zinc-900 text-zinc-950 dark:text-white text-base leading-normal transition-colors  duration-150
 }
 
 code {
