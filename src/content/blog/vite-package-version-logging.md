@@ -44,6 +44,6 @@ Finally, log the version in your init function
 console.log(`Example lib version: ${__APP_VERSION__}`)
 ```
 
-Console logs are usually discouraged in production code, this is actually fine for debugging purposes in controlled environments. For production, you might want to add some log level controls.
-
 The cool thing about this solution is that during development, `__APP_VERSION__` is just a global variable. But when you build for production, Vite replaces it with the actual version string, so there's zero performance hit.
+
+Keep in mind that console logs are usually discouraged in production code, this is actually fine for debugging purposes in controlled environments. For production, you might want to add some log level controls.
